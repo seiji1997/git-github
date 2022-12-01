@@ -79,31 +79,137 @@ $ git branch -d <branch-name>
 
 ## diff
 
+```
+Working directoryとローカルリポのdiffを確認する
+$ git diff HEAD
+Staging areaとローカルリポのdiffを確認する
+$ git diff --staged HEAD
+特定のファイルのdiffを確認する 
+$ git diff -- <filename>
+commit同士のdiffを確認する 
+$ git diff <commitID> <commitID>
+ブランチ同士のdiffを確認する
+$ git diff <branchname> <branchname>
+mergetoolを使ってコンフリクトに対処してマージする 
+$ git mergetool
+```
 
 ## rebase
 
+```
+pull時にmergeではなくrebaseする
+$ git pull --rebase <remote_ref> <branchname>
+デフォルトでpull時にrebaseする 
+$ git config --global pull.rebase true
+pull時にmergeではなくrebaseする
+$ git pull --rebase <remote_ref> <branchname>
+rebaseによるコンフリクト $ git mergetool
+$ git rebase --conUnue
+```
 
 ## stash
 
+```
+stashする
+$ git stash
+stashした内容を一覧表示する 
+$ git stash list
+stashした内容をWorking directoryに戻す 
+$ git stash apply
+作業内容をstashから消す 
+$ git stash drop
+untrackファイルの作業内容も含めてstashする 
+$ git stash -u
+特定のstashの内容を確認する
+$ git stash show stash@{<i>}
+$git stash applyと$git stash dropを同時に行う 
+$ git stash pop
+gibgnoreしているファイルの作業内容も含めてstashする 
+$ git stash -a
+stashする際にメッセージを添える 
+$ git stash save “<message>”
+特定のstashだけapplyする
+$ git stash apply stash@{<i>}
+特定のstashだけdropする
+$ git stash drop stash@{<i>}
+```
 
 ## tag
 
+```
+最新のコミットにラベル付けをする
+$ git tag <tagname>
+tag一覧を表示する
+$ git tag --list
+指定したtagを削除する
+$ git tag --delete <tagname>
+annotated tagを作成する
+$ git tag -a <tagname>
+tag同士のdiffを表示する
+$ git diff <tagname1> <tagname2>
+特定のコミットにtagを付ける 
+$ git tag -a <tagname> <commitID>
+指定のtagをリモートリポに送信する
+$ git push <remote_ref> <tagname>
+全てのtag情報をpushする
+$ git push <remote_ref> --tags
+特定のtag情報をリモートリポ上から削除する 
+$ git push <remote_ref> :<tagname>
+コードを特定のバージョンの状態にする
+$ git checkout tags/<tagname>
+全てのtag情報をローカルに取得する 
+$git fetch --tags --all
+
+```
 
 ## submodule
 
+```
+プロジェクトにsubmoduleを追加する 
+$git submodule add <submodule_url>
+submoduleの初期化(inibalize)をする
+$git submodule init
+submoduleの更新(update)をする 
+$git submodule update
+clone時に$git submodule initと$git submodule updateを実行する
+$git clone --recurse-submodules <url>
+全てのsubmoduleに対して特定のgitコマンドを実行する 
+$git submodule foreach ’<git command>’
+全てのsubmoduleでコマンドを実行する 
+$git submodule foreach ‘<command>’
+```
 
 ## git-flow and GitHub flow
-
+- [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+- [Git-flow](https://qiita.com/KosukeSone/items/514dd24828b485c69a05)
+- [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
 
 ## wiki
+• README.mdの追加情報を記載する
+• プロジェクトの使い方や，設計や原理など，プロジェクトに関する⻑いコンテンツをwikiに書く 
+• Markdownで書くことが可能
 
 ## Octotree
-
+• Chrome Extension
+• GithubのプロジェクトをTree形式でファイルやフォルダをナビゲーションできる
+• Privateリポジトリには使えない
 
 ## zenhub
-
+• ブラウザのExtension
+• アジャイル開発における「カンバン」をGithubで実現 
+• Github Issueをカンバン化してくれる
 
 ## Revert
 
+```
+指定したコミットの一つ前に状態が戻るようにrevert commitを作成しコミットする
+$git revert <commitID>
+```
 
 ## Reset
+
+```
+指定したコミットにHEADが移動する.(それまでのコミットは全て無くなる)
+$git reset <commitID>
+```
+

@@ -185,19 +185,19 @@ $git submodule foreach ‘<command>’
 - [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
 
 ## wiki
-• README.mdの追加情報を記載する
-• プロジェクトの使い方や，設計や原理など，プロジェクトに関する⻑いコンテンツをwikiに書く 
-• Markdownで書くことが可能
+- README.mdの追加情報を記載する
+- プロジェクトの使い方や，設計や原理など，プロジェクトに関する⻑いコンテンツをwikiに書く 
+- Markdownで書くことが可能
 
 ## Octotree
-• Chrome Extension
-• GithubのプロジェクトをTree形式でファイルやフォルダをナビゲーションできる
-• Privateリポジトリには使えない
+- Chrome Extension
+- GithubのプロジェクトをTree形式でファイルやフォルダをナビゲーションできる
+- Privateリポジトリには使えない
 
 ## zenhub
-• ブラウザのExtension
-• アジャイル開発における「カンバン」をGithubで実現 
-• Github Issueをカンバン化してくれる
+- ブラウザのExtension
+- アジャイル開発における「カンバン」をGithubで実現 
+- Github Issueをカンバン化してくれる
 
 ## Revert
 

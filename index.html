@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Git and GitHub Commands</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333333;
+        }
+        .command {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .diagram {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Git and GitHub Commands</h1>
+    <div class="command">
+        <h2>Clone a Repository</h2>
+        <p><code>git clone &lt;repository-url&gt;</code></p>
+    </div>
+    <div class="command">
+        <h2>Create a New Branch</h2>
+        <p><code>git checkout -b &lt;branch-name&gt;</code></p>
+    </div>
+    <div class="command">
+        <h2>Push Changes to a Branch</h2>
+        <p><code>git push origin &lt;branch-name&gt;</code></p>
+    </div>
+    <div class="command">
+        <h2>Pull Changes from a Branch</h2>
+        <p><code>git pull origin &lt;branch-name&gt;</code></p>
+    </div>
+    <div class="command">
+        <h2>Merge Changes from One Branch into Another</h2>
+        <p><code>git merge &lt;branch-name&gt;</code></p>
+    </div>
+    <div class="command">
+        <h2>Fetch Changes from Remote Repository</h2>
+        <p><code>git fetch --prune</code></p>
+    </div>
+    <div class="diagram">
+        <img src="gitflow.png" alt="Git Workflow Diagram">
+    </div>
+</body>
+</html>
